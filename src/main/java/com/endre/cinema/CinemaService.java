@@ -18,4 +18,10 @@ public class CinemaService {
     public List<MovieDto> getMovies(){
         return movies;
     }
+
+    public MovieDto createMovie(MovieDto movie) {
+        movies.add(movie);
+
+        return movie;
+    }
 }
