@@ -8,14 +8,14 @@ import java.util.List;
 @Service
 public class CinemaService {
 
-    private List<String> movies = new ArrayList<>();
+    private List<MovieDto> movies = new ArrayList<>();
 
     public CinemaService(){
-        movies.add("Avengers Endgame");
-        movies.add("Star Wars Episode IV");
+        movies.add(new MovieDto("Avengers Endgame", 13));
+        movies.add(new MovieDto("Star Wars Episode IV", 10));
     }
 
-    public List<String> getMovies(){
+    public List<MovieDto> getMovies(){
         return movies;
     }
 }

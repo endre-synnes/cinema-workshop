@@ -15,7 +15,7 @@ public class CinemaController {
     private CinemaService cinemaService;
 
     @GetMapping
-    public List<String> getMovies(){
+    public List<MovieDto> getMovies(){
         return cinemaService.getMovies();
     }
 }
