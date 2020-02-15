@@ -6,15 +6,15 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/cinema")
-public class CinemaController {
+@RequestMapping(path = "/movies")
+public class MovieController {
 
     @Autowired
-    private CinemaService cinemaService;
+    private MovieService movieService;
 
     @GetMapping
-    public List<MovieDto> getMovies(){
-        return cinemaService.getMovies();
+    public List<MovieDto> getMovies() {
+        return movieService.getMovies();
     }
 
     @PostMapping
