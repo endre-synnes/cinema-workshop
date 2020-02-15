@@ -19,6 +19,6 @@ public class MovieController {
 
     @PostMapping
     public MovieDto createMovie(@RequestBody MovieDto movie){
-        return cinemaService.createMovie(movie);
+        return movieService.createMovie(movie);
     }
 }
