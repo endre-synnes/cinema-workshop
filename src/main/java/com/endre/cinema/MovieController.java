@@ -12,10 +12,10 @@ import java.util.List;
 public class MovieController {
 
     @Autowired
-    private CinemaService cinemaService;
+    private MovieService movieService;
 
     @GetMapping
     public List<String> getMovies(){
-        return cinemaService.getMovies();
+        return movieService.getMovies();
     }
 }

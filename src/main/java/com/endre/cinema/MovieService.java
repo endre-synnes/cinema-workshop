@@ -6,11 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class CinemaService {
+public class MovieService {
 
     private List<String> movies = new ArrayList<>();
 
-    public CinemaService(){
+    public MovieService(){
         movies.add("Avengers Endgame");
         movies.add("Star Wars Episode IV");
     }
