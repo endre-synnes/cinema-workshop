@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path = "/cinema")
-public class CinemaController {
+@RequestMapping(path = "/movies")
+public class MovieController {
 
     @GetMapping
     public String getMovies(){
