@@ -28,15 +28,15 @@ You should also be able to query moves by their age limit.
 #### Ex 1
 Create a Controller - branch: `ex-1`
 
-You should create a Controller class that contains one method for a GET request. It should only return a String.\
+You should create a Controller class (using the annotation `@RestController`) that contains one method for a GET request. It should only return a String.\
 Now run the application an open your web browser. Go to the following URL: [localhost:8080/movies](http://localhost:8080/movies). You should now see the String you wrote in the Controller Class, in your browser window.
 
 
 #### Ex 2
 Create a Service class - branch: `ex-2
 
-Create a Class annotated with @Service. This should have a method that returns a list of Strings (Movie Titles). 
-Make use of the Service class in the Controller, using the @Autowired annotation. 
+Create a Class annotated with `@Service`. This should have a method that returns a list of Strings (Movie Titles). 
+Make use of the Service class in the Controller, using the `@Autowired` annotation. 
 Your API should now return a list of Movie titles.
 
 #### Ex 3
