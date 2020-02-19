@@ -33,7 +33,7 @@ public class CinemaApplicationTests {
     @Test
     public void successfullyGetListOfMovies() {
 
-        var response = given()
+       given()
                 .get(path)
                 .then()
                 .statusCode(200)
