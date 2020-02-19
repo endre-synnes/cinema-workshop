@@ -1,27 +1,24 @@
 package com.endre.cinema;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Service
 public class MovieService {
 
-    private List<MovieDto> movies = new ArrayList<>();
+    @Autowired
+    private MovieRepository movieRepository;
 
-    public MovieService(){
-        movies.add(new MovieDto("Avengers Endgame", 13));
-        movies.add(new MovieDto("Star Wars Episode IV", 10));
+
+    public Iterable<MovieEntity> getMovies(){
+        return movieRepository.findAll();
     }
 
-    public List<MovieDto> getMovies(){
-        return movies;
-    }
+    public Integer createMovie(MovieDto movie) {
+        var movieEntity = new MovieEntity();
+        movieEntity.setAgeLimit(movie.getAgeLimit());
+        movieEntity.setTitle(movie.getTitle());
 
-    public MovieDto createMovie(MovieDto movie) {
-        movies.add(movie);
-
-        return movie;
+        return movieRepository.save(movieEntity).getId();
     }
 }
