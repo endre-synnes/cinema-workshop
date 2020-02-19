@@ -3,6 +3,9 @@ package com.endre.cinema;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class MovieService {
 
@@ -10,8 +13,10 @@ public class MovieService {
     private MovieRepository movieRepository;
 
 
-    public Iterable<MovieEntity> getMovies(){
-        return movieRepository.findAll();
+    public List<MovieEntity> getMovies(){
+        List<MovieEntity> movies = new ArrayList<>();
+        movieRepository.findAll().forEach(movies::add);
+        return movies;
     }
 
     public Integer createMovie(MovieDto movie) {

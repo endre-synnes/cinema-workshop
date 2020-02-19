@@ -3,6 +3,8 @@ package com.endre.cinema;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping(path = "/movies")
 public class MovieController {
@@ -11,7 +13,7 @@ public class MovieController {
     private MovieService movieService;
 
     @GetMapping
-    public Iterable<MovieEntity> getMovies() {
+    public List<MovieEntity> getMovies() {
         return movieService.getMovies();
     }
 
