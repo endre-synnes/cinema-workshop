@@ -55,3 +55,9 @@ Now we want to create new Movie objects by doing a POST request to our API.
 First we need to create a new method in the Controller class. This should handle a POST request, with a request body in JSON.
 We will now see that Spring automatically deserializes the JSON object into a Java class.
 Lastly we need to create a method in the Service class to add the new Movie into our list of Movies.
+
+#### Ex 5
+Make use of a database - branch: `ex-5`
+
+Now we will make use of an H2 database (in-memory-database). We will create an entity class to represent a table in our database.
+We will also make use of the `@Repository` annotation in a class we will use to communicate with our database.
