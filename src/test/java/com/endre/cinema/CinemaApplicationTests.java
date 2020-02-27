@@ -22,4 +22,9 @@ public class CinemaApplicationTests {
         movieService.createMovie(movieDto);
         assertTrue(movieService.getMovies().size() > numberOfMoviesInDb);
     }
+
+    @Test
+    public void shouldBeTestDataInDatabase(){
+        assertFalse(movieService.getMovies().isEmpty());
+    }
 }
