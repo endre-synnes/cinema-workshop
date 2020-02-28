@@ -61,3 +61,14 @@ Make use of a database - branch: `ex-5`
 
 Now we will make use of an H2 database (in-memory-database). We will create an entity class to represent a table in our database.
 We will also make use of the `@Repository` annotation in a class we will use to communicate with our database.
+
+#### Ex 6
+Create our first unit test - branch `ex-6`
+
+We will use the test class already generated in in the test folder. 
+Here we will create a test method testing if we can create a movie.
+
+#### Ex 7
+Populate database with test data - branch `ex-7`
+
+We will now create a configuration class in the test folder that will populate our database with some test data.
