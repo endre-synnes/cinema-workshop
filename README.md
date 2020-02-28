@@ -33,7 +33,7 @@ Now run the application an open your web browser. Go to the following URL: [loca
 
 
 #### Ex 2
-Create a Service class - branch: `ex-2
+Create a Service class - branch: `ex-2`
 
 Create a Class annotated with `@Service`. This should have a method that returns a list of Strings (Movie Titles). 
 Make use of the Service class in the Controller, using the `@Autowired` annotation. 
