@@ -62,6 +62,15 @@ Make use of a database - branch: `ex-5`
 Now we will make use of an H2 database (in-memory-database). We will create an entity class to represent a table in our database.
 We will also make use of the `@Repository` annotation in a class we will use to communicate with our database.
 
+#### Ex 5b
+View movies in our database - branch: `ex-5b`
+
+We will now use the h2 console to view the data stored in our database. 
+- After you have started the application go to the following url [http://localhost:8080/h2-console](http://localhost:8080/h2-console).
+- Replace the JDBC URL with: `jdbc:h2:mem:testdb`
+- username: `sa`
+- password: <let this field be empty>
+
 #### Ex 6
 Create our first unit test - branch `ex-6`
 
