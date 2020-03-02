@@ -13,7 +13,7 @@ public class MovieController {
     private MovieService movieService;
 
     @GetMapping
-    public List<MovieEntity> getMovies() {
+    public List<MovieDto> getMovies() {
         return movieService.getMovies();
     }
 

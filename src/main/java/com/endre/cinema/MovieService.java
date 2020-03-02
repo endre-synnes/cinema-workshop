@@ -13,9 +13,10 @@ public class MovieService {
     private MovieRepository movieRepository;
 
 
-    public List<MovieEntity> getMovies(){
-        List<MovieEntity> movies = new ArrayList<>();
-        movieRepository.findAll().forEach(movies::add);
+    public List<MovieDto> getMovies(){
+        List<MovieDto> movies = new ArrayList<>();
+        movieRepository.findAll().forEach(movie ->
+                movies.add(new MovieDto(movie.getTitle(), movie.getAgeLimit())));
         return movies;
     }
 
